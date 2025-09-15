@@ -12,16 +12,16 @@ const winPatterns=[
     [0,4,8],
     [2,4,6]
 ];
-boxes.forEach(box=>{
-    box.addEventListener('click',()=>{
-        if(turn){
-            box.innerText.color='red';
-            box.innerText='X';
-            turn=false;
+        boxes.forEach(box=>{
+            box.addEventListener('click',()=>{
+                if(turn){
+            box.innerText = 'X';
+            box.style.color = 'red';
+            turn = false;
         }else{
-            box.innerText.color='blue';
-            box.innerText='O';
-            turn=true;
+            box.innerText = 'O';
+            box.style.color = 'blue';
+            turn = true;
         }
         box.disabled=true;
         checkwinner();
