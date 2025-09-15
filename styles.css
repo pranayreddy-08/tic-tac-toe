@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #669bbc;
+}
+h1{
+    color: #fdf0d5;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+.game-board{
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    background-color: #650e14;
+    padding: 10px;
+    border-radius: 10px;
+}
+.cell{
+    background-color:#003049;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a62929;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.cell:hover{
+    background-color: #075e8d;
+}
+#resetButton{
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color:  #cabbbb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000000;
+    box-shadow: 0  0 6px #000000;
+    transition: background-color 0.3s ease;
+    
+}
+#resetButton:hover{
+    background-color: #f0e1d2;
+}
+.hide{
+    display: none;
+}
+.winner{
+    font-size: 2rem;
+    color: #fdf0d5;
+    text-shadow: 2px 2px 4px #000000;
+}
+@media (max-width: 480px) {
+    .game-board {
+        width: 150px;
+        height: 150px;
+        gap: 6px;
+        padding: 8px;
+    }
+    .cell {
+        font-size: 2rem;
+    }
+    #resetButton {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+/* Responsive design for smaller screens 
